@@ -1,0 +1,141 @@
+/* Resetando margens e paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Definindo fonte global */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f7fb; /* Fundo bem suave */
+  color: #333; /* Cor do texto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container principal */
+.container {
+  width: 100%;
+  max-width: 450px;
+  padding: 20px;
+}
+
+/* Estilo do formulário */
+.form-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-left: 8px solid #ff6f00; /* Laranja forte na borda */
+}
+
+/* Título do formulário */
+h2 {
+  font-size: 28px;
+  color: #2c3e50; /* Azul escuro para o título */
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* Estilo dos campos de input */
+.input-group {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #ff6f00; /* Laranja claro para o foco */
+  box-shadow: 0 0 8px rgba(255, 111, 0, 0.5);
+  outline: none;
+}
+
+/* Estilo do link de esqueci a senha */
+.forgot-password {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.forgot-password a {
+  font-size: 14px;
+  color: #ff6f00;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* Botão de submit */
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  background-color: #ff6f00; /* Laranja vibrante */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+  background-color: #e65c00; /* Tom mais escuro de laranja */
+  transform: scale(1.05); /* Efeito de leve aumento */
+}
+
+/* Link para cadastro */
+.register-link {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.register-link a {
+  color: #ff6f00;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .form-container {
+    padding: 25px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .input-group input,
+  .btn-submit {
+    font-size: 14px;
+  }
+}
