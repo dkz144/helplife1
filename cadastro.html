@@ -1,85 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HelpLife</title>
+    <title>Cadastro | HelpLife</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <!-- Imagem no canto esquerdo -->
-      <div class="imagem">
-        <img src="sua-imagem.jpg" alt="Imagem" />
-      </div>
+      <div class="form-container">
+        <h2>Cadastro</h2>
+        <form action="#" method="POST">
+          <div class="input-group">
+            <label for="nome">Nome completo</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Digite seu nome"
+              required
+            />
+          </div>
 
-      <!-- Conteúdo no lado direito -->
-      <div class="content">
-        <!-- Container para os botões do topo -->
-        <div class="top-buttons">
-          <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
-          <a
-            href="C:\Users\IsaquePereiraAlcanta\Documents\GitHub\helplife1\cadastro.html"
-            class="btn"
-            >Login</a
-          >
-          <a
-            href="C:\Users\IsaquePereiraAlcanta\Documents\GitHub\helplife1\cadastro.html"
-            class="btn"
-            >Cadastro</a
-          >
-        </div>
+          <div class="input-group">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Digite seu e-mail"
+              required
+            />
+          </div>
 
-        <!-- Botão Help Life -->
-        <button class="help-btn" onclick="helpLife()">Help Life</button>
+          <div class="input-group">
+            <label for="senha">Senha</label>
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              placeholder="Digite sua senha"
+              required
+            />
+          </div>
 
-        <!-- Sidebar -->
-        <div class="sidebar" id="sidebar">
-          <button class="close-btn" onclick="toggleSidebar()">✖</button>
-          <h2>Menu</h2>
-          <ul>
-            <li>
-              <a href="#" style="color: white; text-decoration: none">Item 1</a>
-            </li>
-            <li>
-              <a href="#" style="color: white; text-decoration: none">Item 2</a>
-            </li>
-            <li>
-              <a href="#" style="color: white; text-decoration: none">Item 3</a>
-            </li>
-          </ul>
-        </div>
+          <div class="input-group">
+            <label for="confirmar-senha">Confirmar Senha</label>
+            <input
+              type="password"
+              id="confirmar-senha"
+              name="confirmar-senha"
+              placeholder="Confirme sua senha"
+              required
+            />
+          </div>
 
-        <header>
-          <h1>HelpLife</h1>
-          <!-- Título do cabeçalho -->
-        </header>
+          <div class="input-group">
+            <label for="telefone">Telefone</label>
+            <input
+              type="tel"
+              id="telefone"
+              name="telefone"
+              placeholder="Digite seu telefone"
+              required
+            />
+          </div>
 
-        <script>
-          function toggleSidebar() {
-            document.getElementById("sidebar").classList.toggle("open");
-          }
+          <div class="terms">
+            <label>
+              <input type="checkbox" name="terms" required />
+              Eu aceito os <a href="#">termos e condições</a>
+            </label>
+          </div>
 
-          function helpLife() {
-            alert("Você clicou no Help Life!");
-          }
-        </script>
-
-        <div class="search-box">
-          <input type="text" class="search-txt" placeholder="Pesquisar" />
-          <a href="#">
-            <img src="lupa.png" alt="lupa" height="20" width="20" />
-          </a>
-        </div>
-        <iframe
-          title="Itajahy"
-          width="250"
-          height="250"
-          id="gmap_canvas"
-          src="https://maps.google.com/maps?q=2880%20Itajahy%20Feitosa,%20Sao%20Paulo&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          scrolling="no"
-        >
-        </iframe>
+          <button type="submit" class="btn-submit">Cadastrar</button>
+        </form>
       </div>
     </div>
   </body>
