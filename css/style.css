@@ -10,7 +10,7 @@ body{
     font-family: "Poppins", serif;
 }
 :root{
-   --verde-escuro: #0687a3;
+   --verde-escuro: #4cceeb;
   --verde: #2f9364;
   --orange: #ff7c37;    
   --degrade-btn: linear-gradient(#fe9611, #ff5c00);
