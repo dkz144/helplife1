@@ -2,10 +2,8 @@
 /* Certifique-se de ter importado o Inter, por exemplo: */
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-:root {
-    --white: #ffffff;
-    --emerald-600: #059669;
-}   
+
+
 body {
     font-family: 'Inter', sans-serif;
 }
@@ -43,8 +41,4 @@ body{
 
 
 /* start: Sidebar */
-.chat-sidebar {
-    width: 64px;
-    background-color: ;
-}
 /*end: Sidebar */
