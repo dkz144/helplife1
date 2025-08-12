@@ -30,7 +30,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
-  border-left: 8px solid #ff6f00; /* Laranja forte na borda */
+  border-left: 8px solid #3c73ef; /* Laranja forte na borda */
 }
 
 /* Título do formulário */
@@ -65,7 +65,7 @@ h2 {
 }
 
 .input-group input:focus {
-  border-color: #ff6f00; /* Laranja claro para o foco */
+  border-color: #2c3e50; /* Laranja claro para o foco */
   box-shadow: 0 0 8px rgba(255, 111, 0, 0.5);
   outline: none;
 }
@@ -78,7 +78,7 @@ h2 {
 
 .forgot-password a {
   font-size: 14px;
-  color: #ff6f00;
+  color: #2c3e50;
   text-decoration: none;
 }
 
@@ -91,7 +91,7 @@ h2 {
   width: 100%;
   padding: 14px;
   font-size: 18px;
-  background-color: #ff6f00; /* Laranja vibrante */
+  background-color: #2c3e50; /* Laranja vibrante */
   color: white;
   border: none;
   border-radius: 8px;
@@ -100,7 +100,7 @@ h2 {
 }
 
 .btn-submit:hover {
-  background-color: #e65c00; /* Tom mais escuro de laranja */
+  background-color: #2c3e50; /* Tom mais escuro de laranja */
   transform: scale(1.05); /* Efeito de leve aumento */
 }
 
@@ -112,7 +112,7 @@ h2 {
 }
 
 .register-link a {
-  color: #ff6f00;
+  color: #2c3e50;
   text-decoration: none;
 }
 
