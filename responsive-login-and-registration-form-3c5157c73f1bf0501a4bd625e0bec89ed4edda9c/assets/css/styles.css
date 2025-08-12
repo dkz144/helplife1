@@ -351,3 +351,11 @@ img {
     transform: translate(0rem, 0rem);
   }
 }
+
+.login__area {
+  transform: scale(0.85) translateX(-40px); /* reduz 15% e move 40px para a esquerda */
+  transform-origin: top center;
+}
+.login__title {
+  font-size: 1.3rem;
+}
