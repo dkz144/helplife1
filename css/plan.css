@@ -12,7 +12,7 @@ body {
   background-image: url("tricodando.png")
 }
 .card {
-  background-color: #fff;
+  background-color: #ffffff;
   width: 180px;
   height: 260px;
   border-radius: 12px;
@@ -37,7 +37,7 @@ body {
 }
 .card h2 {
   font-size: .9rem;
-  color: #aaaa;
+  color: #000000aa;
 }
 .card button {
   background-color: #2192FF;
@@ -45,7 +45,7 @@ body {
   border: none;
   padding: 4px;
   width: 80%;
-  color: #fff;
+  color: #ffffff;
   font-size: 1rem;
   font-weight: bold;
   border-radius: 4px;
