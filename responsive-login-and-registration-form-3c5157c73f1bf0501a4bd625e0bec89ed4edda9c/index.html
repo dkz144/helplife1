@@ -138,5 +138,20 @@
    
    <!--=============== MAIN JS ===============-->
    <script src="assets/js/main.js"></script>
+  
+   <form action="backend/register.php" method="POST">
+  <input type="text" name="nome" placeholder="Seu nome" required><br>
+  <input type="email" name="email" placeholder="Seu email" required><br>
+  <input type="password" name="senha" placeholder="Sua senha" required><br>
+  <button type="submit">Cadastrar</button>
+</form>
+
+<form action="backend/login.php" method="POST">
+  <input type="email" name="email" placeholder="Seu email" required><br>
+  <input type="password" name="senha" placeholder="Sua senha" required><br>
+  <button type="submit">Entrar</button>
+</form>
+
+
 </body>
 </html>
