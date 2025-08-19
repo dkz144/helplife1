@@ -1,29 +1,34 @@
 <?php
-require_once __DIR__ . '/db.php';
+require_once "db.php";
 
-$nome  = trim($_POST['nome']  ?? '');
-$email = trim($_POST['email'] ?? '');
-$senha = trim($_POST['senha'] ?? '');
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if (!empty($_POST['nome']) && !empty($_POST['email']) && !empty($_POST['senha'])) {
+        $nome  = $_POST['nome'];
+        $email = $_POST['email'];
+        $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 
-if ($nome === '' || $email === '' || $senha === '') {
-    die("Preencha todos os campos!");
+        // Verifica se já existe email
+        $check = $conn->prepare("SELECT id FROM usuarios WHERE email = ?");
+        $check->bind_param("s", $email);
+        $check->execute();
+        $check->store_result();
+
+        if ($check->num_rows > 0) {
+            echo "⚠️ Email já cadastrado!";
+        } else {
+            $stmt = $conn->prepare("INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)");
+            $stmt->bind_param("sss", $nome, $email, $senha);
+
+            if ($stmt->execute()) {
+                echo "✅ Usuário cadastrado com sucesso!";
+            } else {
+                echo "Erro ao cadastrar: " . $conn->error;
+            }
+        }
+
+        $check->close();
+    } else {
+        echo "⚠️ Preencha todos os campos!";
+    }
 }
-
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    die("Email inválido!");
-}
-
-// Verifica se já existe
-$stmt = $pdo->prepare("SELECT id FROM usuarios WHERE email = ?");
-$stmt->execute([$email]);
-if ($stmt->fetch()) {
-    die("Email já cadastrado!");
-}
-
-// Cria usuário
-$hash = password_hash($senha, PASSWORD_DEFAULT);
-$stmt = $pdo->prepare("INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)");
-$stmt->execute([$nome, $email, $hash]);
-
-echo "Usuário cadastrado com sucesso!";
 ?>
